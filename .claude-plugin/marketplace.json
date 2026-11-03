@@ -1,0 +1,14 @@
+{
+  "name": "auto-command-runner",
+  "owner": {
+    "name": "Provash Sarker",
+    "url": "https://github.com/allex2021"
+  },
+  "plugins": [
+    {
+      "name": "auto-command-runner",
+      "source": "./",
+      "description": "Universal autonomous command execution and self-healing environment setup for Claude Code."
+    }
+  ]
+}

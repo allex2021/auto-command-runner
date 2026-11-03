@@ -1,14 +1,43 @@
 {
-  "name": "antigravity-auto-command-runner",
+  "name": "auto-command-runner",
   "version": "1.0.0",
-  "description": "Autonomous command runner & self-healing environment setup plugin for Google Antigravity.",
+  "description": "Universal autonomous command execution and self-healing environment setup plugin for Antigravity, Claude Code, Codex, and Cursor.",
   "author": {
     "name": "Provash Sarker",
     "url": "https://github.com/allex2021"
   },
+  "homepage": "https://github.com/allex2021/auto-command-runner",
   "repository": {
     "type": "git",
-    "url": "https://github.com/allex2021/antigravity-auto-command-runner.git"
+    "url": "https://github.com/allex2021/auto-command-runner.git"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "keywords": [
+    "agent-skill",
+    "autonomous-commands",
+    "self-healing",
+    "antigravity",
+    "claude-code",
+    "codex",
+    "cursor"
+  ],
+  "skills": "./skills/",
+  "extensions": {
+    "com.openai": {
+      "requires_local_executor": true,
+      "interface": {
+        "displayName": "Auto-Command Runner",
+        "shortDescription": "Autonomous execution and self-healing environment setup",
+        "longDescription": "Equips AI coding agents with zero-hesitation terminal execution, pre-flight dependency checking, and automated self-healing error recovery.",
+        "developerName": "Provash Sarker",
+        "category": "Developer Tools",
+        "capabilities": [
+          "Autonomous execution",
+          "Dependency installation",
+          "Self-healing error recovery"
+        ],
+        "websiteURL": "https://github.com/allex2021/auto-command-runner"
+      }
+    }
+  }
 }

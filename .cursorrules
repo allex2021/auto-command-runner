@@ -1,0 +1,5 @@
+# Cursor Autonomous Execution Rules
+
+- **Autonomous Execution**: Execute all required commands directly in terminal without asking the user to run them manually.
+- **Automatic Setup & Self-Healing**: Automatically detect and install missing dependencies, configure prerequisites, and resolve terminal errors proactively.
+- **Verification**: Always inspect exit codes and error output to ensure command completion.

@@ -1,9 +1,10 @@
-# Antigravity Auto-Command Runner 🚀
+# Auto-Command Runner 🚀
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![Antigravity Plugin](https://img.shields.io/badge/Antigravity-Plugin-green.svg)](https://github.com/allex2021/antigravity-auto-command-runner)
+[![GitHub release](https://img.shields.io/badge/Release-v1.0.0-green.svg)](https://github.com/allex2021/auto-command-runner)
+[![Compatible with](https://img.shields.io/badge/Compatible%20With-Antigravity%20%7C%20Claude%20Code%20%7C%20Codex%20%7C%20Cursor-purple.svg)](https://github.com/allex2021/auto-command-runner)
 
-An autonomous execution and self-healing environment setup plugin for **Google Antigravity**, **Claude Code**, and **Codex**.
+Universal autonomous command execution and self-healing environment setup plugin for **Google Antigravity**, **Anthropic Claude Code**, **OpenAI Codex**, and **Cursor**.
 
 ---
 
@@ -12,48 +13,69 @@ An autonomous execution and self-healing environment setup plugin for **Google A
 By default, coding agents often hesitate when executing terminal commands or ask users to copy-paste commands manually into their terminal.
 
 **Auto-Command Runner** equips your agent with:
-1. **Fully Autonomous Execution**: Commands are automatically executed via `run_command` without bothering the user.
-2. **Pre-flight Dependency Detection**: Automatically identifies missing CLI tools, packages, or runtimes and installs them.
-3. **Self-Healing Error Recovery**: If a command fails (e.g. port collision, missing library, broken path), the agent analyzes the stack trace, fixes the root cause, and retries automatically.
-4. **Daemon & Background Process Management**: Starts long-running processes (e.g. dev servers, watchers) properly in the background.
+1. **Fully Autonomous Execution**: Commands are automatically executed via the agent's native bash/terminal tool without bothering the user.
+2. **Pre-flight Dependency Detection**: Automatically identifies missing CLI tools, packages, or runtimes (npm, pip, brew, etc.) and installs them.
+3. **Self-Healing Error Recovery**: If a command fails (port collision, missing package, wrong path, etc.), the agent diagnoses the root cause, fixes the issue, and retries automatically.
+4. **Daemon & Background Management**: Spawns long-running servers and watchers without freezing the agent session.
 
 ---
 
-## 📦 Installation
+## 📦 Installation Guide
 
-### Antigravity CLI
-Install directly with the Antigravity CLI:
+### 1. Google Antigravity
+Install with the Antigravity CLI:
 ```bash
-agy plugin install https://github.com/allex2021/antigravity-auto-command-runner
+agy plugin install https://github.com/allex2021/auto-command-runner
+```
+Or clone globally into `~/.gemini/config/plugins/`:
+```bash
+git clone https://github.com/allex2021/auto-command-runner.git ~/.gemini/config/plugins/auto-command-runner
 ```
 
-### Manual Installation (Antigravity Global)
-Clone into your global Antigravity plugins directory:
+### 2. Anthropic Claude Code
+Add the marketplace and install:
 ```bash
-git clone https://github.com/allex2021/antigravity-auto-command-runner.git ~/.gemini/config/plugins/antigravity-auto-command-runner
+claude plugin marketplace add allex2021/auto-command-runner
+claude plugin install auto-command-runner@auto-command-runner
 ```
 
-### Local Project (Workspace Scope)
-Add it directly to your project:
+### 3. OpenAI Codex
+Add the plugin repository:
 ```bash
-mkdir -p .agents/plugins
-git clone https://github.com/allex2021/antigravity-auto-command-runner.git .agents/plugins/antigravity-auto-command-runner
+codex plugin marketplace add allex2021/auto-command-runner
+codex plugin add auto-command-runner@auto-command-runner
 ```
+
+### 4. Cursor / Any Coding Agent (Workspace Scope)
+Simply clone into your project's `.agents` directory:
+```bash
+git clone https://github.com/allex2021/auto-command-runner.git .agents/plugins/auto-command-runner
+```
+The included `AGENTS.md`, `CLAUDE.md`, `GEMINI.md`, and `.cursorrules` are automatically detected and loaded.
 
 ---
 
-## 🛠️ Structure
+## 🛠️ Repository Architecture
 
 ```text
-antigravity-auto-command-runner/
-├── plugin.json
-├── LICENSE
-├── README.md
+auto-command-runner/
+├── plugin.json                 # Universal Open Plugins manifest
+├── .claude-plugin/             # Anthropic Claude Code manifest & marketplace
+│   ├── marketplace.json
+│   └── plugin.json
+├── .codex-plugin/              # OpenAI Codex manifest
+│   └── plugin.json
+├── AGENTS.md                   # Codex / Universal agent rules
+├── CLAUDE.md                   # Claude Code rules
+├── GEMINI.md                   # Antigravity / Gemini rules
+├── .cursorrules                # Cursor AI rules
+├── LICENSE                     # MIT License
+├── README.md                   # Universal documentation
 ├── rules/
 │   └── AGENTS.md
 └── skills/
     └── auto-command-runner/
-        └── SKILL.md
+        └── SKILL.md            # Universal portable skill
 ```
 
 ---

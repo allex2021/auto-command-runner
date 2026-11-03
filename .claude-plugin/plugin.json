@@ -1,0 +1,23 @@
+{
+  "name": "auto-command-runner",
+  "displayName": "Auto-Command Runner",
+  "version": "1.0.0",
+  "description": "Universal autonomous command execution and self-healing environment setup for Claude Code.",
+  "author": {
+    "name": "Provash Sarker",
+    "url": "https://github.com/allex2021"
+  },
+  "homepage": "https://github.com/allex2021/auto-command-runner",
+  "repository": "https://github.com/allex2021/auto-command-runner",
+  "license": "MIT",
+  "keywords": [
+    "autonomous-execution",
+    "self-healing",
+    "terminal-automation",
+    "zero-prompting"
+  ],
+  "skills": "./skills/",
+  "rules": [
+    "./rules/AGENTS.md"
+  ]
+}

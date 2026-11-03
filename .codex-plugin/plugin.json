@@ -1,0 +1,20 @@
+{
+  "name": "auto-command-runner",
+  "version": "1.0.0",
+  "description": "Universal autonomous command execution and self-healing environment setup for OpenAI Codex.",
+  "author": {
+    "name": "Provash Sarker",
+    "url": "https://github.com/allex2021"
+  },
+  "homepage": "https://github.com/allex2021/auto-command-runner",
+  "repository": "https://github.com/allex2021/auto-command-runner",
+  "license": "MIT",
+  "skills": "./skills/",
+  "requires_local_executor": true,
+  "interface": {
+    "displayName": "Auto-Command Runner",
+    "shortDescription": "Autonomous execution and self-healing environment setup",
+    "longDescription": "Equips AI coding agents with zero-hesitation terminal execution, pre-flight dependency checking, and automated self-healing error recovery.",
+    "developerName": "Provash Sarker"
+  }
+}
