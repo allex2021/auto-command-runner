@@ -1,0 +1,14 @@
+{
+  "name": "antigravity-auto-command-runner",
+  "version": "1.0.0",
+  "description": "Autonomous command runner & self-healing environment setup plugin for Google Antigravity.",
+  "author": {
+    "name": "Provash Sarker",
+    "url": "https://github.com/allex2021"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/allex2021/antigravity-auto-command-runner.git"
+  },
+  "license": "MIT"
+}
